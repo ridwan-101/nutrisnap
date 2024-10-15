@@ -5,6 +5,7 @@ import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
 import 'package:nutrisnap/core/utils/textfield.dart';
 import 'package:nutrisnap/core/widgets/button.dart';
+import 'package:nutrisnap/features/auth/signup_ver.dart';
 import 'package:nutrisnap/features/auth/singin.dart';
 
 class SignUp extends StatefulWidget {
@@ -36,6 +37,7 @@ class _SignUpState extends State<SignUp> {
         body: Padding(
           padding: EdgeInsets.all(10.sp),
           child: SafeArea(
+            // child:SingleChildScrollView(
             child: Center(
               child: Column(
                 children: [
@@ -84,7 +86,7 @@ class _SignUpState extends State<SignUp> {
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -108,7 +110,7 @@ class _SignUpState extends State<SignUp> {
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -132,7 +134,7 @@ class _SignUpState extends State<SignUp> {
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -156,7 +158,7 @@ class _SignUpState extends State<SignUp> {
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -218,13 +220,13 @@ class _SignUpState extends State<SignUp> {
                             // label: 'Email',
                             labelTextStyle: textTheme.bodyMedium?.copyWith(
                                 fontWeight: FontWeight.w900,
-                                color: appColor.white),
+                                color: appColor.black),
                             hintText: 'Password',
                             hintStyle: TextStyle(color: appColor.grey),
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -248,7 +250,7 @@ class _SignUpState extends State<SignUp> {
                             contentPadding:
                                 EdgeInsets.symmetric(vertical: 14.sp),
                             // validator: FormValidators.validateEmail,
-                            textStyle: TextStyle(color: appColor.white),
+                            textStyle: TextStyle(color: appColor.black),
                             onTap: () {},
                           ),
                           SizedBox(
@@ -261,7 +263,12 @@ class _SignUpState extends State<SignUp> {
                             width: double.infinity,
                             textcolor: appColor.white,
                             textActionName: 'REGISTER',
-                            onTap: () async {},
+                            onTap: () async {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context)=> SignupVer())
+                              );
+                            },
                           ),
                           SizedBox(
                             height: 15.h,
@@ -271,7 +278,7 @@ class _SignUpState extends State<SignUp> {
                               style: TextStyle(color: appColor.black),
                               children: <TextSpan>[
                                 const TextSpan(
-                                    text: 'Don’t have an account? ',
+                                    text: 'Already have an account? ',
                                     style:
                                         TextStyle(fontWeight: FontWeight.w500)),
                                 TextSpan(
@@ -312,6 +319,7 @@ class _SignUpState extends State<SignUp> {
                 ],
               ),
             ),
+            // ),
           ),
         ),
       ),

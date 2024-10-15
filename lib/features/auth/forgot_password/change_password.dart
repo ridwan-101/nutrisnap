@@ -4,16 +4,15 @@ import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
 import 'package:nutrisnap/core/utils/textfield.dart';
 import 'package:nutrisnap/core/widgets/button.dart';
-import 'package:nutrisnap/features/auth/forgot_password/email_ver.dart';
 
-class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({super.key});
+class ChangePassword extends StatefulWidget {
+  const ChangePassword({super.key});
 
   @override
-  State<ForgotPassword> createState() => _ForgotPasswordState();
+  State<ChangePassword> createState() => _ChangePasswordState();
 }
 
-class _ForgotPasswordState extends State<ForgotPassword> {
+class _ChangePasswordState extends State<ChangePassword> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -38,10 +37,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 Image.asset(kforgot), 
+                 Image.asset(kchpass), // Replace with your actual image path
                 SizedBox(height: 20.h),
                 Text(
-                  'E-Mail Address Here',
+                  'Enter New Password',
                   style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
@@ -49,7 +48,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
                 SizedBox(height: 10.h),
                 Text(
-                  'Enter the E-mail address associated with your account',
+                  'Your Password must be different from the previously used Password',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 16.0),
                 ),
@@ -68,11 +67,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           height: 20.h,
                         ),
                         CustomTextFieldWidget(
-                          // controller: emailController,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.r),
                             borderSide: BorderSide(
-                              color: appColor.themeColor,
+                              color: appColor.gray,
                               width: 1.5.w,
                             ),
                           ),
@@ -80,37 +78,60 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                           labelTextStyle: textTheme.bodyMedium?.copyWith(
                               fontWeight: FontWeight.w900,
                               color: appColor.white),
-                          hintText: 'Email Address',
+                          hintText: 'Password',
                           hintStyle: TextStyle(color: appColor.grey),
                           contentPadding: EdgeInsets.symmetric(vertical: 14.sp),
 
-                          textStyle: TextStyle(color: appColor.white),
+                          textStyle: TextStyle(color: appColor.black),
                           onTap: () {},
                         ),
                         SizedBox(
                           height: 25.h,
                         ),
-                        
+                         CustomTextFieldWidget(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(30.r),
+                            borderSide: BorderSide(
+                              color: appColor.gray,
+                              width: 1.5.w,
+                            ),
+                          ),
+
+                          labelTextStyle: textTheme.bodyMedium?.copyWith(
+                              fontWeight: FontWeight.w900,
+                              color: appColor.white),
+                          hintText: 'Confirm Password',
+                          hintStyle: TextStyle(color: appColor.grey),
+                          contentPadding: EdgeInsets.symmetric(vertical: 14.sp),
+
+                          textStyle: TextStyle(color: appColor.black),
+                          onTap: () {},
                                 //forgot password screen and function here
                                
                               
-                        AltActionButtonPrimary(
-                            isActive: true,
-                            color: appColor.white,
-                            height: 40.h,
-                            width: double.infinity,
-                            textcolor: appColor.white,
-                            textActionName: 'RECOVER PASSWORD',
-                            onTap: () async {
-                               Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          EmailVer(),
-                                    ),);
-                            },
-                          ),
+                        
+                         ),
+                         SizedBox(
+                          height: 10.h,
+                         ),
+                            AltActionButtonPrimary(
+                    isActive: true,
+                    color: appColor.white,
+                    height: 40.h,
+                    width: double.infinity,
+                    textcolor: appColor.white,
+                    textActionName: 'CONTINUE',
+                    onTap: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChangePassword(),
+                        ),
+                      );
+                    },
+                  ),
                       ],
+
                     ),
                   ),
                 ),
