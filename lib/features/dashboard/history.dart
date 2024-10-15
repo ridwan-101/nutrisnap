@@ -29,12 +29,23 @@ class _HistoryState extends State<History> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                //
                 ReusablrContiner(
-                  onTap: () {
-                    print("hello Big H");
-                  },
+                  onTap: () {},
                   text: "Daily",
-                )
+                ),
+                ReusablrContiner(
+                  onTap: () {},
+                  text: "Weekly",
+                ),
+                ReusablrContiner(
+                  onTap: () {},
+                  text: "Monthly",
+                ),
+                ReusablrContiner(
+                  onTap: () {},
+                  text: "Yearly",
+                ),
               ],
             )
           ],
