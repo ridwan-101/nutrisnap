@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
+import 'package:nutrisnap/features/dashboard/history.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -60,11 +61,17 @@ class _EditProfileState extends State<EditProfile> {
                 ),
               ],
             ),
-            SizedBox(height: 50.h,),
-            Form(child:
-            Column(
-              
-            ) )
+            SizedBox(
+              height: 50.h,
+            ),
+            Form(
+                child: Column(
+              children: [
+                TextFormField(
+                  decoration: InputDecoration(),
+                )
+              ],
+            )),
           ],
         ),
       )),
