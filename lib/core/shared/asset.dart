@@ -11,6 +11,23 @@ final ktwitter = 'twitter'.png;
 final kgmail = 'gmail'.png;
 final kfacebook = 'facebook'.png;
 final kfruit = 'fruit'.png;
+final kverf = 'verf'.png;
+final kforgot = 'forgot'.png;
+final kchpass = 'chpass'.png;
+final krefresh = 'refresh'.png;
+final kcalender = 'calender'.png;
+final kon_1 = 'on_1'.png;
+final kon_2 = 'on_2'.png;
+final kon_3 = 'on_3'.png;
+final knext = 'Group 1'.png;
+final kprofile = 'profile'.png;
+final kcamera = 'camera'.png;
+final kuser = 'icon _User_Edit'.png;
+final klogout = 'icon_log_out'.png;
+final kcog = 'icon _cog'.png;
+final kglobe = 'icon _Globe'.png;
+final kcontract = 'icon _contract'.png;
+final kgoto = 'Solid'.png;
 
 extension AssetExt on String {
   get goPng {

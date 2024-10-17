@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/routes.dart';
 import 'package:nutrisnap/features/auth/splash.dart';
+import 'package:nutrisnap/features/dashboard/profile/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,14 +21,16 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
-        title: 'Ashopree',
+        title: 'Nutri Snap',
         theme: ThemeData(),
         home: Splash(),
+        
         debugShowCheckedModeBanner: false,
         // debugShowCheckedModeBanner: false,
         // title: F.title,
         initialRoute: Splash.routeName,
         onGenerateRoute: onGenerateRoute,
+        
       ),
     );
   }

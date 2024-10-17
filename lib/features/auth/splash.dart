@@ -2,7 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
-import 'package:nutrisnap/features/auth/singin.dart';
+import 'package:nutrisnap/features/Onboarding/onboarding_1.dart';
+//import 'package:nutrisnap/features/auth/singin.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Splash extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SplashState extends State<Splash> with TickerProviderStateMixin {
     // Add a delay of 2 seconds before navigating to the next screen
     Timer(
       const Duration(seconds: 5),
-      () => Navigator.pushReplacementNamed(context, SignIn.routeName),
+      () => Navigator.pushReplacementNamed(context, Onboarding1.routeName),
     );
   }
 

@@ -4,9 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
 import 'package:nutrisnap/core/utils/textfield.dart';
+import 'package:nutrisnap/core/widgets/bottom_nabar.dart';
 import 'package:nutrisnap/core/widgets/button.dart';
+import 'package:nutrisnap/features/auth/forgot_password/forgot_password.dart';
 import 'package:nutrisnap/features/auth/signup.dart';
-import 'package:nutrisnap/features/dashboard/home/home.dart';
+//import 'package:nutrisnap/features/dashboard/home/home.dart';
 
 class SignIn extends StatefulWidget {
   static const routeName = '/signIn';
@@ -87,7 +89,7 @@ class _SignInState extends State<SignIn> {
                               contentPadding:
                                   EdgeInsets.symmetric(vertical: 14.sp),
                               // validator: FormValidators.validateEmail,
-                              textStyle: TextStyle(color: appColor.white),
+                              textStyle: TextStyle(color: appColor.black),
                               onTap: () {},
                             ),
                             SizedBox(
@@ -111,7 +113,7 @@ class _SignInState extends State<SignIn> {
                               contentPadding:
                                   EdgeInsets.symmetric(vertical: 14.sp),
                               // validator: FormValidators.validateEmail,
-                              textStyle: TextStyle(color: appColor.white),
+                              textStyle: TextStyle(color: appColor.black),
                               onTap: () {},
                             ),
                             SizedBox(
@@ -126,7 +128,7 @@ class _SignInState extends State<SignIn> {
                               textActionName: 'LOGIN',
                               onTap: () async {
                                 Navigator.of(context)
-                                    .pushNamed(HomeDashboard.routeName);
+                                    .pushNamed(BottomNabar.routeName);
                               },
                             ),
                             SizedBox(
@@ -135,6 +137,12 @@ class _SignInState extends State<SignIn> {
                             InkWell(
                               onTap: () {
                                 //forgot password screen and function here
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ForgotPassword(),
+                                  ),
+                                );
                               },
                               child: Align(
                                 alignment: Alignment.centerRight,
