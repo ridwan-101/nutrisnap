@@ -152,7 +152,7 @@ class _SignInState extends State<SignIn> {
                                         .titleMedium!
                                         .copyWith(
                                           color: appColor.themeColor,
-                                        )),
+                                        )),//changes for hassant 
                               ),
                             ),
                             Text(
