@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
+import 'package:nutrisnap/features/dashboard/profile/change_lang.dart';
 import 'package:nutrisnap/features/dashboard/profile/edit_profile.dart';
 //import 'package:nutrisnap/core/utils/theme.dart';
 
@@ -125,6 +126,13 @@ class _ProfileState extends State<Profile> {
                 height: 15.h,
               ),
               ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => LanguageSelection()),
+                  );
+                },
                 leading: Container(
                   width: 60,
                   height: 60,
