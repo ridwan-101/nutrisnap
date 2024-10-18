@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/routes.dart';
 import 'package:nutrisnap/features/auth/splash.dart';
-import 'package:nutrisnap/features/dashboard/profile/profile.dart';
+//import 'package:nutrisnap/features/dashboard/profile/profile.dart';
 
 void main() {
   runApp(const MyApp());
