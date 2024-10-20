@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nutrisnap/core/shared/asset.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
+//import 'package:nutrisnap/features/dashboard/history.dart';
 
 class HomeDashboard extends StatefulWidget {
+  final List<Widget>? children;
+  final List<VoidCallback>? onTaps;
   static const routeName = '/homeDashboard';
-  const HomeDashboard({super.key});
+  const HomeDashboard({this.children, super.key, this.onTaps});
 
   @override
   State<HomeDashboard> createState() => _HomeDashboardState();
@@ -17,10 +20,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-      
-  
-      appBar: AppBar( 
+      appBar: AppBar(
         automaticallyImplyLeading: false,
         leading: Padding(
           padding: const EdgeInsets.all(4.0),
@@ -84,8 +84,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                         ),
                         Align(
                           alignment: Alignment.centerRight,
-                          child: Image.asset(
-                              kfruit), // This will position the image on the right
+                          child: Image.asset(kfruit),
                         ),
                       ],
                     ),
@@ -111,13 +110,12 @@ class _HomeDashboardState extends State<HomeDashboard> {
                           Text(
                             'Calorie and Diet Chart',
                             style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold
-                            ),
+                                fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           Align(
                             alignment: Alignment.centerRight,
-                            child: Image.asset(krefresh), // This will position the image on the right
+                            child: Image.asset(
+                                krefresh), // This will position the image on the right
                           ),
                         ],
                       ),
@@ -125,20 +123,20 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                       
-                      Text(
-                        'Total Calorie Consumed',
-                        style: TextStyle(
-                          color: appColor.themeColor,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Align(
-                            alignment: Alignment.centerRight,
-                            child: Image.asset(kcalender), // This will position the image on the right
+                          Text(
+                            'Total Calorie Consumed',
+                            style: TextStyle(
+                              color: appColor.themeColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                       ],
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Image.asset(
+                                kcalender), // This will position the image on the right
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 10.h,
@@ -151,7 +149,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                       
+
                       SizedBox(height: 10.h),
                       Text(
                         'Sort the chart with time',
@@ -164,36 +162,22 @@ class _HomeDashboardState extends State<HomeDashboard> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Daily' ,
-                              style: TextStyle(color: appColor.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: appColor.themeColor,
-                              )),
-                          ElevatedButton(
-                              onPressed: () {},
-                              child: Text('Weekly',
-                              style: TextStyle(color: appColor.white),),
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: appColor.themeColor)),
-                          ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Monthly',
-                                style: TextStyle(color: appColor.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: appColor.themeColor)),
-                          ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Yearly',
-                                style: TextStyle(color: appColor.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: appColor.themeColor)),
+                          ReusablrContiner(
+                            onTap: () {},
+                            text: "Daily",
+                          ),
+                          ReusablrContiner(
+                            onTap: () {},
+                            text: "Weekly",
+                          ),
+                          ReusablrContiner(
+                            onTap: () {},
+                            text: "Monthly",
+                          ),
+                          ReusablrContiner(
+                            onTap: () {},
+                            text: "Yearly",
+                          ),
                         ],
                       ),
                       SizedBox(height: 20),
@@ -268,6 +252,52 @@ class _HomeDashboardState extends State<HomeDashboard> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class ReusablrContiner extends StatelessWidget {
+  final String? text;
+  final VoidCallback? onTap;
+  final IconData? icon;
+  // final String boxText;
+  const ReusablrContiner({
+    super.key,
+    this.onTap,
+    this.text,
+    this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        InkWell(
+          onTap: onTap,
+          child: Container(
+            height: 28.h,
+            width: 72.w,
+            decoration: BoxDecoration(
+                color: appColor.themeColor,
+                //border: Border.all(color: appColor.green),
+                borderRadius: BorderRadius.circular(7)),
+            child: Center(
+              child: icon != null
+                  ? Icon(
+                      icon,
+                      size: 20.sp,
+                    )
+                  : Text(
+                      text ?? '',
+                      style: TextStyle(
+                          color: appColor.white,
+                          fontSize: 8,
+                          fontStyle: FontStyle.normal),
+                    ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

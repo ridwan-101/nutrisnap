@@ -32,7 +32,7 @@ class _ProfileState extends State<Profile> {
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Stack(
-                children: [
+                children: [ 
                   SizedBox(
                     width: 120.w,
                     height: 120.h,

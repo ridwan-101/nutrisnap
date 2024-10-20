@@ -46,7 +46,7 @@ class _SignUpState extends State<SignUp> {
                       height: 10.h,
                     ),
                     Image.asset(klogo2),
-                    SizedBox(
+                    SizedBox( 
                       height: 5.h,
                     ),
                     Text(
