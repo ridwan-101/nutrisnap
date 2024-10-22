@@ -129,8 +129,7 @@ class _ProfileState extends State<Profile> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => LanguageSelection()),
+                    MaterialPageRoute(builder: (context) => ChangeLang()),
                   );
                 },
                 leading: Container(

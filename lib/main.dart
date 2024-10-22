@@ -24,13 +24,12 @@ class MyApp extends StatelessWidget {
         title: 'Nutri Snap',
         theme: ThemeData(),
         home: Splash(),
-        
+
         debugShowCheckedModeBanner: false,
         // debugShowCheckedModeBanner: false,
         // title: F.title,
         initialRoute: Splash.routeName,
         onGenerateRoute: onGenerateRoute,
-        
       ),
     );
   }

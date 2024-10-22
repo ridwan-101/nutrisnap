@@ -37,6 +37,13 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_screenutil: ^5.9.3
   shared_preferences: ^2.3.2
+  fl_chart: ^0.69.0
+  syncfusion_flutter_gauges: ^27.1.53
+  syncfusion_flutter_charts: ^27.1.53
+  pie_chart: ^5.4.0
+  mobile_scanner: ^6.0.1
+  qr_scanner_overlay: ^0.0.2
+
 
 dev_dependencies:
   flutter_test:
