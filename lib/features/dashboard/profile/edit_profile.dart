@@ -9,6 +9,7 @@ import 'package:nutrisnap/core/utils/colors.dart';
 import 'package:nutrisnap/core/utils/textfield.dart';
 
 import 'package:nutrisnap/core/widgets/button.dart';
+import 'package:nutrisnap/features/auth/signup.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
@@ -16,8 +17,6 @@ class EditProfile extends StatefulWidget {
   @override
   State<EditProfile> createState() => _EditProfileState();
 }
-
-String selectedStatus = 'on';
 
 class _EditProfileState extends State<EditProfile> {
   @override

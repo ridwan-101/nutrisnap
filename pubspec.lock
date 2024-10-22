@@ -353,26 +353,26 @@ packages:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_charts
-      sha256: df13f25d2095bf747c0c67460a06b655a6cce6d74380d9e4ef24d9a523a2e1b6
+      sha256: ec08668a7b3c95075aee32f6d73b7a053c6f1361de1e85f88a433d63f835beed
       url: "https://pub.dev"
     source: hosted
-    version: "27.1.53"
+    version: "27.1.55"
   syncfusion_flutter_core:
     dependency: transitive
     description:
       name: syncfusion_flutter_core
-      sha256: becd190595cba56feac5ec17b805b35df9f006171c131c209f79b5c58fc780eb
+      sha256: bc86234c9a0a87b6c3288b9065175e74e9a73e22b2237989a8bbdeff0c8befd7
       url: "https://pub.dev"
     source: hosted
-    version: "27.1.53"
+    version: "27.1.55"
   syncfusion_flutter_gauges:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_gauges
-      sha256: "729d8b2a89884c74286d8a530de5b604aa12883243c232bf15681f50a648cb5d"
+      sha256: "6963c390378dd2dbe27d1f1a8f0c6dbe35ab01077d0743afee6c1311c310fdc2"
       url: "https://pub.dev"
     source: hosted
-    version: "27.1.53"
+    version: "27.1.55"
   term_glyph:
     dependency: transitive
     description:
