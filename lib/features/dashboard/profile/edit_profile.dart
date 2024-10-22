@@ -9,6 +9,7 @@ import 'package:nutrisnap/core/utils/colors.dart';
 import 'package:nutrisnap/core/utils/textfield.dart';
 
 import 'package:nutrisnap/core/widgets/button.dart';
+import 'package:nutrisnap/features/auth/signup.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({super.key});

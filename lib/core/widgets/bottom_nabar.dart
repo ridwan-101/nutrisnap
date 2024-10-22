@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nutrisnap/core/utils/colors.dart';
-
+import 'package:nutrisnap/features/dashboard/feed.dart';
 import 'package:nutrisnap/features/dashboard/feed/nutrition_feed.dart';
 import 'package:nutrisnap/features/dashboard/history.dart';
 import 'package:nutrisnap/features/dashboard/home/home.dart';
