@@ -68,168 +68,168 @@ class _HistoryState extends State<History> {
                     // borderRadius: BorderRadius.circular(20),
                   ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment
-                            .spaceBetween, // Pushes content to the edges
-                        children: [
-                          Text(
-                            'History Chart',
-                            style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: appColor.white),
-                          ),
-                          Align(
-                            alignment: Alignment.centerRight,
-                            child: Image.asset(krefresh),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 10),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Total Calorie Consumed',
-                            style: TextStyle(
-                              color: appColor.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment
+                              .spaceBetween, // Pushes content to the edges
+                          children: [
+                            Text(
+                              'History Chart',
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.bold,
+                                  color: appColor.white),
                             ),
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: Image.asset(krefresh),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 10),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Total Calorie Consumed',
+                              style: TextStyle(
+                                color: appColor.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10.h,
+                        ),
+                        Text(
+                          '5034 KCal',
+                          style: TextStyle(
+                            color: appColor.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      Text(
-                        '5034 KCal',
-                        style: TextStyle(
-                          color: appColor.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
                         ),
-                      ),
 
-                      SizedBox(height: 10.h),
-                      Text(
-                        'Cycle Chart of Calorie consumed',
-                        style: TextStyle(
-                          color: appColor.white,
-                          fontSize: 16,
+                        SizedBox(height: 10.h),
+                        Text(
+                          'Cycle Chart of Calorie consumed',
+                          style: TextStyle(
+                            color: appColor.white,
+                            fontSize: 16,
+                          ),
                         ),
-                      ),
-                      // SizedBox(height: 15.h),
+                        // SizedBox(height: 15.h),
 
-                      SizedBox(height: 20),
-                      Row(
-                        children: [
-                          SfRadialGauge(
-                            axes: <RadialAxis>[
-                              RadialAxis(
-                                radiusFactor: 0.25,
-                                pointers: <GaugePointer>[
-                                  RangePointer(
-                                    value: 80,
-                                    cornerStyle: CornerStyle.bothCurve,
-                                    color: Colors.redAccent,
-                                  )
-                                ],
-                                interval: 5,
-                                startAngle: 5,
-                                endAngle: 5,
-                                showTicks: false,
-                                showLabels: false,
-                                annotations: <GaugeAnnotation>[
-                                  GaugeAnnotation(
-                                    widget: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Kcal',
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              color: appColor.white),
-                                        ),
-                                        // Text(
-                                        //   'Water',
-                                        //   style: TextStyle(fontSize: 18),
-                                        // )
-                                      ],
-                                    ),
-                                    angle: 90,
-                                    positionFactor: 0.1,
-                                  )
-                                ],
-                              ),
-                              RadialAxis(
-                                radiusFactor: 0.35,
-                                pointers: [
-                                  RangePointer(
-                                      value: 60,
+                        SizedBox(height: 20),
+
+                        Row(
+                          children: [
+                            SfRadialGauge(
+                              axes: <RadialAxis>[
+                                RadialAxis(
+                                  radiusFactor: 0.25,
+                                  pointers: <GaugePointer>[
+                                    RangePointer(
+                                      value: 80,
                                       cornerStyle: CornerStyle.bothCurve,
-                                      color: Colors.deepOrangeAccent)
-                                ],
-                                interval: 5,
-                                startAngle: 20,
-                                endAngle: 20,
-                                showTicks: false,
-                                showLabels: false,
-                              ),
-                              RadialAxis(
-                                radiusFactor: 0.45,
-                                pointers: [
-                                  RangePointer(
-                                    value: 40,
-                                    cornerStyle: CornerStyle.bothCurve,
-                                    color: Colors.yellow,
-                                  )
-                                ],
-                                interval: 5,
-                                startAngle: 20,
-                                endAngle: 20,
-                                showTicks: false,
-                                showLabels: false,
-                              ),
-                              RadialAxis(
-                                radiusFactor: 0.55,
-                                pointers: [
-                                  RangePointer(
-                                    value: 30,
-                                    cornerStyle: CornerStyle.bothCurve,
-                                    color: Colors.greenAccent,
-                                  )
-                                ],
-                                interval: 5,
-                                startAngle: 20,
-                                endAngle: 20,
-                                showTicks: false,
-                                showLabels: false,
-                              ),
-                              RadialAxis(
-                                radiusFactor: 0.65,
-                                pointers: [
-                                  RangePointer(
-                                    value: 20,
-                                    cornerStyle: CornerStyle.bothCurve,
-                                    color: Colors.lightBlue,
-                                  )
-                                ],
-                                interval: 5,
-                                startAngle: 20,
-                                endAngle: 20,
-                                showTicks: false,
-                                showLabels: false,
-                              )
-                            ],
-                          )
-                        ],
-                      )
-                    ],
-                  ),
+                                      color: Colors.redAccent,
+                                    )
+                                  ],
+                                  interval: 5,
+                                  startAngle: 5,
+                                  endAngle: 5,
+                                  showTicks: false,
+                                  showLabels: false,
+                                  annotations: <GaugeAnnotation>[
+                                    GaugeAnnotation(
+                                      widget: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            'Kcal',
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: appColor.white),
+                                          ),
+                                          // Text(
+                                          //   'Water',
+                                          //   style: TextStyle(fontSize: 18),
+                                          // )
+                                        ],
+                                      ),
+                                      angle: 90,
+                                      positionFactor: 0.1,
+                                    )
+                                  ],
+                                ),
+                                RadialAxis(
+                                  radiusFactor: 0.35,
+                                  pointers: [
+                                    RangePointer(
+                                        value: 60,
+                                        cornerStyle: CornerStyle.bothCurve,
+                                        color: Colors.deepOrangeAccent)
+                                  ],
+                                  interval: 5,
+                                  startAngle: 20,
+                                  endAngle: 20,
+                                  showTicks: false,
+                                  showLabels: false,
+                                ),
+                                RadialAxis(
+                                  radiusFactor: 0.45,
+                                  pointers: [
+                                    RangePointer(
+                                      value: 40,
+                                      cornerStyle: CornerStyle.bothCurve,
+                                      color: Colors.yellow,
+                                    )
+                                  ],
+                                  interval: 5,
+                                  startAngle: 20,
+                                  endAngle: 20,
+                                  showTicks: false,
+                                  showLabels: false,
+                                ),
+                                RadialAxis(
+                                  radiusFactor: 0.55,
+                                  pointers: [
+                                    RangePointer(
+                                      value: 30,
+                                      cornerStyle: CornerStyle.bothCurve,
+                                      color: Colors.greenAccent,
+                                    )
+                                  ],
+                                  interval: 5,
+                                  startAngle: 20,
+                                  endAngle: 20,
+                                  showTicks: false,
+                                  showLabels: false,
+                                ),
+                                RadialAxis(
+                                  radiusFactor: 0.65,
+                                  pointers: [
+                                    RangePointer(
+                                      value: 20,
+                                      cornerStyle: CornerStyle.bothCurve,
+                                      color: Colors.lightBlue,
+                                    )
+                                  ],
+                                  interval: 5,
+                                  startAngle: 20,
+                                  endAngle: 20,
+                                  showTicks: false,
+                                  showLabels: false,
+                                )
+                              ],
+                            )
+                          ],
+                        )
+                      ]),
                 ),
               ),
             ],

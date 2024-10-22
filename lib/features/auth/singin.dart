@@ -128,7 +128,7 @@ class _SignInState extends State<SignIn> {
                               textActionName: 'LOGIN',
                               onTap: () async {
                                 Navigator.of(context)
-                                    .pushNamed(BottomNabar.routeName);
+                                    .pushNamed(BottomNavbar.routeName);
                               },
                             ),
                             SizedBox(
@@ -152,7 +152,7 @@ class _SignInState extends State<SignIn> {
                                         .titleMedium!
                                         .copyWith(
                                           color: appColor.themeColor,
-                                        )),//changes for hassant 
+                                        )), //changes for hassant
                               ),
                             ),
                             Text(
