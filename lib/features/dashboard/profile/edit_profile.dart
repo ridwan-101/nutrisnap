@@ -18,6 +18,8 @@ class EditProfile extends StatefulWidget {
   State<EditProfile> createState() => _EditProfileState();
 }
 
+String selectedStatus = 'on';
+
 class _EditProfileState extends State<EditProfile> {
   @override
   Widget build(BuildContext context) {
